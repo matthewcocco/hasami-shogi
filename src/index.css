@@ -1,0 +1,136 @@
+html, body {
+  background:#ccc;
+  font: 14px "Arial", "Helvetica", sans-serif;
+  margin: 20px;
+}
+
+.words {
+  max-width:40%;
+  margin:3rem;
+  font-size:1.25rem;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background: white;
+  border: 1px solid black;
+  float: left;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 64px;
+  height: 64px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 64px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square.dark {
+  background-color: #bcbcbc;
+}
+
+.square.bright {
+  background-color: #ddd;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  padding:50px;
+}
+
+.game-info {
+  margin-left:1rem;
+  padding-top:9rem;
+}
+
+.game-info button {
+  background: #ccc;
+  border: 1px solid white;
+  width:150px;
+  padding:0.75em;
+  color:black;
+  transition:all 0.3s ease;
+}
+
+.game-info button:hover {
+  background: #555;
+  color:white;
+  transition:all 0.3s ease;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size:40px;
+  margin:10px auto;
+  text-align:center;
+}
+
+.game-board {
+	padding:10px;
+	background-color: black;
+  margin-top:8rem;
+}
+
+.perspective .game-board {
+  transform: perspective(1200px) rotateX(30deg);
+  box-shadow:0 10px white;
+}
+
+.piece {
+    text-shadow:
+   -1px -1px 0 #333,  
+    1px -1px 0 #333,
+    -1px 1px 0 #333,
+     1px 1px 0 #333;
+  transition: all .2s ease;
+}
+
+.piece:hover {
+  transition: all .2s ease;
+}
+
+.piece.black {
+  color:#29434e;
+  text-shadow:0px 8px black;
+}
+.turn-black .black:hover {
+  color:#4b6575;
+  margin-top:-4px;
+}
+
+.piece.white {
+  color:#eee;
+  text-shadow:0px 8px black;
+  margin-top:-2px;
+}
+.turn-white .white:hover {
+  color:#fff;
+  margin-top:-8px;
+}
+
+.turn-black button:focus .black {
+  color:#4b6575;
+  margin-top:-4px;
+  text-shadow:0px 8px 0px #999;
+}
+
+.turn-white button:focus .white {
+  color:#fff;
+  margin-top:-4px;
+  text-shadow:0px 8px 0px #77f;
+}
