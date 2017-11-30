@@ -269,6 +269,8 @@ class Game extends React.Component {
             <li>Diagnose & correct occasional css animation misbehavior</li>
             <li>Generalized board math (enable scaling board & behavior from 4x4 to NxN size)</li>
           </ul>
+          <hr/>
+          <p>Here's the <a href="https://github.com/matthewcocco/hasami-shogi/">code</a> on GitHub.</p>
         </div>
         <div className="perspective">
           <div className={"game-board " + (nowplaying === "White" ? "turn-white" : "turn-black")}>
